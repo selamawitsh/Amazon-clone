@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.border_shade{
+    position: relative;
+}
+.border_shade::before{
+    position:absolute;
+    width: 100%;
+    content: "";
+    bottom:0px;
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0),rgb(255, 255, 255));
+}
