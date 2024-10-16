@@ -1,0 +1,12 @@
+/* .resultContainer{
+    display: flex;
+} */
+.resultContainer{
+    display: flex;
+    gap: 50px; 
+    max-width: 1450px; 
+  }
+  
+/* .resultContainer div{
+    margin: 0 auto;
+} */

@@ -6,16 +6,22 @@ import { BiCart} from "react-icons/bi";
 import americanFlag from "../../assets/images/flag.jpg"
 import Lowerheader from './Lowerheader';
 import styles from '../header/header.module.css';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { DataContext } from '../dataProvider/DataProvider';
 
  function Header() {
+   const [{basket},dispatch] =useContext(DataContext)
+   
+    console.log(basket)
   return (
-    <>
+    <section className={styles['fixedHeader']}>
     <div className={styles['header_container']}>
         {/* logo */}
         <div className={styles['logo_container']}>
-            <a href="">
+            <Link to="/">
                 <img src={logo} alt="" />
-            </a>
+            </Link>
 
             {/* delivery */}
                 <div className={styles['delivery']}>
@@ -54,24 +60,24 @@ import styles from '../header/header.module.css';
             </a>
 
             <div className={styles['orders']}>
-            <a href="#">
+            <Link to="/Signup">
             
                 <p>Hello,sign in</p>
                 <span>Account and Lists</span>
-            </a>
+            </Link>
         
-            <a href="#">
+            <Link to="/Orders">
             
                 <p>Return</p>
                 <span>&Orders</span>
-            </a>
-            <a href="#" className={styles['cart']}>
+            </Link>
+            <Link to="/Cart" className={styles['cart']}>
                 {/* carticon */}
                 <BiCart size={35}/>
-                <p>0</p>
+                <p>{basket.length}</p>
                 <span>Cart</span>
 
-            </a>
+            </Link>
             </div>
             
         
@@ -79,7 +85,7 @@ import styles from '../header/header.module.css';
     </div>
     <Lowerheader/>
 
-    </>
+    </section>
   )
 }
 export default Header

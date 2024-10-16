@@ -8,17 +8,17 @@ export const categoryinfo=[
         title:'women\'s clothing',
         
         image:'https://m.media-amazon.com/images/I/51bjqZblOPL._AC_SY879_.jpg',
-        name:'electronics'
+        name:'women\'s clothing'
 
     },
     {
         title:'Men\'s Clothing',
         image:'https://m.media-amazon.com/images/I/41EHsl+NAIL._AC_SR160,160_.jpg',
-        name:'electronics'
+        name:'men\'s clothing'
     },
     {
         title:'Jewelery',
         image:'https://m.media-amazon.com/images/I/61wdIvRROIL._AC_UL320_.jpg',
-        name:'electronics'
+        name:'jewelery'
     }
 ]
